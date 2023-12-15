@@ -1,7 +1,8 @@
 
 import "./js/fetch.js";
-import "./js/header-menu.js"
-import './js/input-search.js'
+import "./js/header-menu.js";
+import './js/input-search.js';
+import "./js/header-menu.js";
 
 
 
@@ -31,7 +32,6 @@ import './js/input-search.js'
 //   const movies = getMovies(API_URL).then(movies => markupMovies(movies));
   
 // }
-
 
 
 

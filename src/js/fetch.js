@@ -11,6 +11,7 @@ async function getPopularMovies(page) {
         // if (response status != 200) {
         //     throw new Error('Not found')
         // }
+        
     return response.data;
     }
     catch (error) {
@@ -31,6 +32,8 @@ async function getRatedMovies(page){
         return error
     }
 }
+
+
 
 // Що очікуються
 async function getUpcomingMovies(page){

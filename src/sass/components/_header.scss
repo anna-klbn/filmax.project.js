@@ -1,15 +1,20 @@
 .header-container {
-   
     margin: 0 auto;
     border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 .header__content {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
     height: 60px;
+
+    @media screen and (max-width:767px) {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .logo {
@@ -17,32 +22,56 @@
     font-size: 30px;
     color: aliceblue;
     text-shadow: 2px 2px 3px #f6ce04;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}
+.menu-container{
+
+    @media screen and (max-width:767px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 30px 20px 30px;
+        background-color:transparent;
+            
+        &is-open{
+            display: block;
+            }
+        }
 }
 
 .site-nav__list {
     display: flex;
     align-items: center;
+    @media screen and (max-width:767px) {
+        display: block;
+    }
 }
 
 .site-nav__item {
     list-style: none;
     text-transform: uppercase;
-}
-
-.site-nav__item{
-
-    &:not(:last-child) {
-    margin-right: 40px;
-}
+    @media screen and (min-width:768px) {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
 }
 
 .site-nav__link {
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.site-nav__link:hover {
-    color: yellow;
+    @media screen and (max-width:767px) {
+        font-size: 28px;
+        display: block;
+        padding: 10px 0px;
+    }
+        &:hover {
+            color: yellow;
+        }
 }
 
 .header__search {
@@ -52,34 +81,59 @@
     outline: none;
     &:hover{
         border: 3px solid #f6ce04;
-    }
-    
+    } 
 }
 
 .btn {
     padding: 8px;
     color: #FFFFFF;
-    background-color: #1b1919;
+    background-color:transparent;
     border: 0;
     cursor: pointer;
     &:focus{
         color: #f6ce04;
     }
 }
-.button-menu {
+.button__menu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
     cursor: pointer;
     width: 35px;
     height: 35px;
     padding: 0;
-    background-color: #1b1919;
-    border: 1px solid #FFFFFF;
+    margin: 0;
+    background-color:transparent;
+    border:0;
+    z-index: 1;
 
-    @media screen and (min-width:1280px) {
+    @media screen and (min-width:767px) {
         display: none;
     }
+
 }
 
 .icon-menu,
-.icon-close {
+.icon-close{
     fill: #FFFFFF;
+}
+
+.button__menu .icon-close {
+    display: none;
+}
+
+.button__menu.is-open .icon-close {
+    display: block;
+}
+
+.button__menu.is-open .icon-menu {
+    display: none;
+}
+
+.menu-container.is-open {
+    display: flex;
+}
+
+.button__menu.is-open { 
+    z-index: 5; 
 }
