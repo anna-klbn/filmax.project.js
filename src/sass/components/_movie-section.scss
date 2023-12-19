@@ -1,0 +1,24 @@
+.movie-section{
+    background-color: tomato;
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie{
+    
+    width: 300px;
+    margin: 10px;
+    background-color: pink;
+
+}
+.movie-img{
+    width: 100%;
+}
+.movie-info{
+    color:aliceblue
+}
+.movie-title{
+    display: flex;
+    justify-content: space-between;
+}

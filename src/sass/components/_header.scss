@@ -35,7 +35,8 @@
         left: 0;
         width: 100%;
         padding: 20px 30px 20px 30px;
-        background-color:transparent;
+        background-color:#1b1919;
+        z-index: 10;
             
         &is-open{
             display: block;
@@ -72,6 +73,9 @@
         &:hover {
             color: yellow;
         }
+}
+.site-nav__link.active{
+    color: #f6ce04;
 }
 
 .header__search {
