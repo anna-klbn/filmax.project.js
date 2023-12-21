@@ -1,7 +1,7 @@
+import "./js/api/fetch.js";
+import "./js/dom/header-menu.js";
+import "./js/common/swiper.js";
+import "./js/common/pagination.js";
 
-import "./js/fetch.js";
-import "./js/header-menu.js";
-import './js/input-search.js';
-import "./js/header-menu.js";
-import "./js/swiper.js";
-import "./js/movie.js";
+import "./js/dom/movie.js"
+

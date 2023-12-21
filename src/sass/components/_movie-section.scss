@@ -77,10 +77,12 @@
 
 .main-div{
     color: beige;
-    font-size: 27px;
+    font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 20px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .movie-data{
     font-size: 10px;
@@ -98,3 +100,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.main-link{
+    &:hover,
+    &:focus{
+        color: rgb(245, 245, 70);
+    }
+}
+
+

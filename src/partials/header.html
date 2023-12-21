@@ -1,0 +1,30 @@
+<header class="header-container">
+  <div class="header__content">
+    <a href="./index.html" class="logo">FILMAX</a>
+    <button
+      type="button"
+      class="button__menu"
+      aria-expanded="false"
+      aria-controls="menu-container"
+      data-menu-button
+    >
+      <svg class="menu__svg" width="24px" height="16px" aria-label="menu">
+        <use
+          href="./images/symbol-defs.svg#icon-close_menu"
+          class="icon-close"
+        ></use>
+        <use href="./images/symbol-defs.svg#icon-menu" class="icon-menu"></use>
+      </svg>
+    </button>
+    <div class="menu-container" data-menu id="menu-container"></div>
+    <form class="form">
+      <input
+        type="text"
+        class="header__search"
+        name="searchQuery"
+        placeholder="Search"
+      />
+      <button type="submit" class="btn">Search</button>
+    </form>
+  </div>
+</header>

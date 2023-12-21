@@ -1,5 +1,5 @@
-import { refs } from "./refs";
-import { onSearchMovies } from "./fetch";
+import { refs } from "../common/refs";
+
 
 refs.form.addEventListener("submit", onFormSubmit);
 

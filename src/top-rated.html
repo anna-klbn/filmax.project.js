@@ -9,83 +9,10 @@
 </html>
 </head>
   <body>
-    <header class="header-container">
-      <div class="header__content">
-        <a href="./index.html" class="logo">FILMAX</a>
-        <button
-          type="button"
-          class="button__menu"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          <svg class="menu__svg" width="24px" height="16px" aria-label="menu">
-            <use
-              href="./images/symbol-defs.svg#icon-close_menu"
-              class="icon-close"
-            ></use>
-            <use
-              href="./images/symbol-defs.svg#icon-menu"
-              class="icon-menu"
-            ></use>
-          </svg>
-        </button>
-        <div class="menu-container" data-menu id="menu-container">
-        </div>
-        <form class="form">
-          <input
-            type="text"
-            class="header__search"
-            name="searchQuery"
-            placeholder="Search"
-          />
-          <button type="submit" class="btn">Search</button>
-        </form>
-      </div>
-    </header>
+    <include src="./partials/header.html"></include>
     <main class="content">
     </main>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="networks-container">
-          <ul class="networks-list">
-            <li class="networks-item">
-              <a class="networks-link" href="https://ua.linkedin.com/">
-                <svg class="networks-icon" width="30px" height="30px">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks-item">
-              <a class="networks-link" href="https://twitter.com/">
-                <svg class="networks-icon" width="30px" height="30px">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks-item">
-              <a class="networks-link" href="https://www.facebook.com/">
-                <svg class="networks-icon" width="30px" height="30px">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks-item">
-              <a class="networks-link" href="https://www.instagram.com/">
-                <svg class="networks-icon" width="30px" height="30px">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <ul class="footer-text">
-            <li class="footer-item">Conditions of Use</li>
-            <li class="footer-item">Privacy & Policy</li>
-            <li class="footer-item">Press Room</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <include src="./partials/footer.html"></include>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
