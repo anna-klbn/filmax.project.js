@@ -41,3 +41,4 @@ const IMAGE_URL = "https://image.tmdb.org/t/p/w300";
 //   .then(response => response.json())
 //   .then(response => console.log(response))
 //     .catch(err => console.error(err));
+

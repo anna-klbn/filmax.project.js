@@ -2,11 +2,12 @@
 const API_KEY = "a80bb377f6b7e60d939d42f267fc679a";
 const BASE_URL = "https://api.themoviedb.org/3";
 const IMAGE_URL = "https://image.tmdb.org/t/p/w300";
+const SEARCH_URL = `${BASE_URL}/search/movie?api_key=${API_KEY}`;
 
 
 import { refs } from "../common/refs";
   
-const form = document.querySelector('.form');
+
 getPopularMovies(`${BASE_URL}/movie/popular?language=en-US&page=1&api_key=${API_KEY}`);
 
 function getPopularMovies(url) {
@@ -47,15 +48,7 @@ function getColor(vote) {
         return "red"
     }
 }
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const value = e.currentTarget.searchQuery.value;
-    console.log(value)
-    if (value) {
-        getPopularMovies(`${BASE_URL}/search/movie?include_adult=false&language=en-US&page=1&api_key=${API_KEY}`)
-    }
-  
-})
+
 
 
 
@@ -123,5 +116,20 @@ function showUpcomingMovies(data) {
         
     })
 };
+
+
+
+
+let searchQuery = "";
+
+refs.form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    searchQuery= e.currentTarget.searchQuery.value;
+
+    if (searchQuery) {
+        getPopularMovies(`${SEARCH_URL}&query=${searchQuery}`);
+    }
+   
+})
 
 
